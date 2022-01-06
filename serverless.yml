@@ -6,7 +6,7 @@ service: fargate-dns-demo
 provider:
   name: aws
   runtime: nodejs12.x
-  region: eu-central-1
+  region: eu-west-2
   iamRoleStatements:
     - Effect: "Allow"
       Action:
@@ -14,7 +14,7 @@ provider:
         - "ecs:DescribeClusters"
         - "ecs:ListTagsForResource"
         - "route53:ChangeResourceRecordSets"
-      Resource: "*"  
+      Resource: "*"
 
 functions:
   registerPublicIp:
